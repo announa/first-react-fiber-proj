@@ -8,7 +8,7 @@ export const Scene = () => {
     <>
       <Camera />
       <Light />
-      <Environment files='misty_pines_2k.hdr' background />
+      <Environment files='./environment/misty_pines_2k.hdr' background />
       <Objects />
     </>
   );

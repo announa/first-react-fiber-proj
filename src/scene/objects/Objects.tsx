@@ -3,6 +3,7 @@ import { useRef } from 'react';
 import { Mesh } from 'three';
 import { Icosahedron } from '../icosahedron/Icosahedron';
 import { Sphere } from '../sphere/Sphere';
+import { Tree } from './tree/Tree';
 
 export const Objects = () => {
   const box = useRef<Mesh>(null);
@@ -12,7 +13,7 @@ export const Objects = () => {
       box.current.rotation.x = clock.getElapsedTime();
     }
     if (sphere.current) {
-      sphere.current.position.x = -3 + Math.cos(clock.getElapsedTime() / 5);
+      sphere.current.position.x = -6 + Math.cos(clock.getElapsedTime() / 5);
       sphere.current.position.y = Math.sin(clock.getElapsedTime() / 5);
     }
   });
@@ -21,6 +22,7 @@ export const Objects = () => {
     <>
       <Icosahedron ref={box} />
       <Sphere ref={sphere} />
+      <Tree />
     </>
   );
 };
