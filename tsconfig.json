@@ -1,0 +1,31 @@
+{
+ "compilerOptions": {
+   "sourceMap": true,
+   "noImplicitAny": true,
+   "module": "CommonJS",
+   "target": "ES6",
+  //  "lib": [
+  //    "esnext",
+  //    "dom",
+  //    "dom.iterable"
+  //  ],
+   "baseUrl": "/",
+   "strict": true,
+   "skipLibCheck": true,
+   "removeComments": true,
+   "jsx": "react-jsx",
+   "allowJs": true,
+   "esModuleInterop": true,
+   "resolveJsonModule": true,
+   "moduleResolution": "node",
+  //  "paths": {
+  //    "components/*": [
+  //      "src/components/*"
+  //    ]
+  //  }
+ },
+ "include": [
+   "./src/**/*",
+   "./webpack.config.ts"
+ ]
+}
