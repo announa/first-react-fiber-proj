@@ -12,7 +12,7 @@ export const Objects = () => {
       box.current.rotation.x = clock.getElapsedTime();
     }
     if (sphere.current) {
-      sphere.current.position.x = -1.5 + Math.cos(clock.getElapsedTime() / 5);
+      sphere.current.position.x = -3 + Math.cos(clock.getElapsedTime() / 5);
       sphere.current.position.y = Math.sin(clock.getElapsedTime() / 5);
     }
   });

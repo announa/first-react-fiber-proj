@@ -1,11 +1,27 @@
-import { forwardRef } from 'react';
-import { Mesh } from 'three';
+import { useTexture } from '@react-three/drei';
+import { forwardRef, useEffect } from 'react';
+import { LinearEncoding, Mesh, RepeatWrapping } from 'three';
 
 export const Icosahedron = forwardRef<Mesh>((pros, ref) => {
+  const texture = useTexture('packeddirt_n.jpg');
+
+  useEffect(() => {
+    texture.encoding = LinearEncoding;
+  }, [texture]);
+
   return (
-    <mesh ref={ref} position={[3, 1, -1]}>
+    <mesh ref={ref} position={[1, 0, 0]}>
       <icosahedronGeometry args={[1, 0]} />
-      <meshPhysicalMaterial transmission={1} thickness={1} roughness={0.2} />
+      <meshPhysicalMaterial
+        color='white'
+        transmission={0.9}
+        thickness={1}
+        roughness={0.3}
+        normalMap={texture}
+        clearcoat={0.4}
+        clearcoatRoughness={1}
+        clearcoatNormalMap={texture}
+      />
     </mesh>
   );
 });
