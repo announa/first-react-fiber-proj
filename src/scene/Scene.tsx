@@ -6,7 +6,7 @@ import { Objects } from './objects/Objects';
 export const Scene = () => {
   return (
     <>
-      <Camera />
+      <Camera /> 
       <Light />
       <Environment files='./environment/misty_pines_2k.hdr' background />
       <Objects />
